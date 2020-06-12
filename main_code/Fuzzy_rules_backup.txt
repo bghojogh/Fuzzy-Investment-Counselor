@@ -1,0 +1,60 @@
+        ################### rules related to EXP_OWN:
+        # ----- rule 1 (rationality):
+        if_rule = np.fmin(exp_own_high_FUZZIFIED, std_own_low_FUZZIFIED)
+        rule1 = np.fmin(if_rule, w_high_MembershipFunction)
+        # ----- rule 15 (rationality):
+        if_rule = np.fmin(exp_own_high_FUZZIFIED, std_own_low_FUZZIFIED)
+        rule15 = np.fmin(if_rule, w_medium_MembershipFunction)
+        # ----- rule 2 (rationality):
+        if_rule = exp_own_minus_high_FUZZIFIED
+        rule2 = np.fmin(if_rule, w_low_MembershipFunction)
+        # ----- rule 11: exp_own_low, case 1:
+        if_rule = np.fmin(exp_own_low_FUZZIFIED, std_own_high_FUZZIFIED)
+        if_rule = np.fmin(if_rule, risk_tolerance_high_FUZZIFIED)
+        rule11 = np.fmin(if_rule, w_medium_MembershipFunction)
+        # ----- rule 12: exp_own_low, case 2:
+        if_rule = np.fmin(exp_own_low_FUZZIFIED, std_own_high_FUZZIFIED)
+        if_rule = np.fmin(if_rule, risk_tolerance_low_FUZZIFIED)
+        rule12 = np.fmin(if_rule, w_low_MembershipFunction)
+        # ----- rule 13: exp_own_low, case 3:
+        if_rule = np.fmin(exp_own_low_FUZZIFIED, std_own_low_FUZZIFIED)
+        rule13 = np.fmin(if_rule, w_medium_MembershipFunction)
+        # ----- rule 14: exp_own_low, case 4:
+        if_rule = np.fmin(exp_own_low_FUZZIFIED, std_own_medium_FUZZIFIED)
+        rule14 = np.fmin(if_rule, w_low_MembershipFunction)
+        # ----- rule 6 (rationality with respect to risk tolerance):
+        if_rule = np.fmin(exp_own_high_FUZZIFIED, std_own_high_FUZZIFIED)
+        if_rule = np.fmin(if_rule, risk_tolerance_high_FUZZIFIED)
+        rule6 = np.fmin(if_rule, w_high_MembershipFunction)
+        # ----- rule 7 (rationality with respect to risk tolerance):
+        if_rule = np.fmin(exp_own_high_FUZZIFIED, std_own_high_FUZZIFIED)
+        if_rule = np.fmin(if_rule, risk_tolerance_low_FUZZIFIED)
+        rule7 = np.fmin(if_rule, w_medium_MembershipFunction)
+
+
+        ################### rules related to EXP_OTHER:
+        # ----- rule 3 (greed):
+        if_rule = np.fmin(exp_other_high_FUZZIFIED, corrolation_coefficient_high_FUZZIFIED)
+        if_rule = np.fmin(if_rule, risk_tolerance_high_FUZZIFIED)
+        rule3 = np.fmin(if_rule, w_high_MembershipFunction)
+        # ----- rule 4 (not put all eggs in one basket):
+        if_rule = np.fmin(exp_other_high_FUZZIFIED, corrolation_coefficient_high_FUZZIFIED)
+        if_rule = np.fmin(if_rule, risk_tolerance_low_FUZZIFIED)
+        rule4 = np.fmin(if_rule, w_medium_MembershipFunction)
+        # ----- rule 5 (caution):
+        if_rule = np.fmin(exp_other_high_FUZZIFIED, corrolation_coefficient_minus_high_FUZZIFIED)
+        rule5 = np.fmin(if_rule, w_low_MembershipFunction)
+
+
+        # ----- reverse of above rules:
+        # ----- rule 8: reverse of rule 3 (rationality):
+        if_rule = np.fmin(exp_other_minus_high_FUZZIFIED, corrolation_coefficient_high_FUZZIFIED)
+        rule8 = np.fmin(if_rule, w_low_MembershipFunction)
+        # ----- rule 9: reverse of rule 3 and 4 (greed):
+        if_rule = np.fmin(exp_other_minus_high_FUZZIFIED, corrolation_coefficient_minus_high_FUZZIFIED)
+        if_rule = np.fmin(if_rule, risk_tolerance_low_FUZZIFIED)
+        rule9 = np.fmin(if_rule, w_medium_MembershipFunction)
+        # ----- rule 10: reverse of rule 3 and 4 (not put all eggs in one basket):
+        if_rule = np.fmin(exp_other_minus_high_FUZZIFIED, corrolation_coefficient_minus_high_FUZZIFIED)
+        if_rule = np.fmin(if_rule, risk_tolerance_high_FUZZIFIED)
+        rule10 = np.fmin(if_rule, w_high_MembershipFunction)

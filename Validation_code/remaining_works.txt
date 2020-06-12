@@ -1,0 +1,9 @@
+1- Finish current fuzzy (rankin, ...)
+2- cleaning the code
+3- Adding Fundamental features to Fuzzy
+4- LSTM
+5- Experiments on prediction: 1- moving average, 2- size of window of moving average, 3- size of window of history, 4- predict how many days
+6- riskless asset
+7- short selling (?)
+8- fix the bug of portfolio --> check the points in north-west quarter of the optimum point because they are better
+9- fix the bug of one day shift in time sreries prediction
