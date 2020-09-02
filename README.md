@@ -5,3 +5,6 @@ One of the coauthors is Hadi Nekoei whose GitHub page is [click here](https://hn
 
 Another repository for this paper: [click here](https://github.com/hnekoeiq/Artifical-Stock-Investment)
 
+This is the code for the following paper:
+
+NekoeiQachkanloo, Hadi, Benyamin Ghojogh, Ali Saheb Pasand, and Mark Crowley. "Artificial Counselor System for Stock Investment." In Proceedings of the AAAI Conference on Artificial Intelligence, vol. 33, pp. 9558-9564. 2019.
